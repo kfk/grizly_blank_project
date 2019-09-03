@@ -1,0 +1,42 @@
+{
+  "sales_flash": {
+    "select": {
+      "fields": {
+        "grouped_dimension": {
+          "type": "dim",
+          "as": "dimension_new_name",
+          "group_by": "group"
+        },
+        "another_grouped_dim": {
+          "type": "dim",
+          "group_by": "group"
+        },
+        "grouped_value": {
+          "type": "num",
+          "as": "sales_value",
+          "group_by": "sum"
+        }
+      },
+      "schema": "example_schema",
+      "table": "example_table"
+    }
+  },
+  "sales_forecast": {
+    "select": {
+      "fields": {
+        "grouped_forecast_dimension": {
+          "type": "dim",
+          "as": "dimension_new_name",
+          "group_by": "group"
+        },
+        "grouped_forecast_value": {
+          "type": "num",
+          "as": "sales_value",
+          "group_by": "sum"
+        }
+      },
+      "schema": "forecast_schema",
+      "table": "forecast_table"
+    }
+  }
+}
